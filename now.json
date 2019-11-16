@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "env": {
+    "API_URL": "api/"
+  },
+  "builds": [
+    { "src": "pages/api/**/*.ts", "use": "@now/node" },
+    { "src": "next.config.js", "use": "@now/next" }
+  ],
+  "routes": [
+    {
+      "src": "/api/users/register",
+      "dest": "pages/api/users/register.ts"
+    },
+    {
+      "src": "/api/users/login",
+      "dest": "pages/api/users/login.ts"
+    },
+    {
+      "src": "/api/users/logout",
+      "dest": "pages/api/users/logout.ts"
+    }
+  ]
+}
